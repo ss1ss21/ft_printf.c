@@ -6,11 +6,12 @@
 #    By: ssonmez <ssonmez@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/10 15:47:27 by ssonmez           #+#    #+#              #
-#    Updated: 2022/12/21 18:03:13 by ssonmez          ###   ########.fr        #
+#    Updated: 2022/12/24 19:12:59 by ssonmez          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC =  ft_printf.c ft_strlen.c ft_printputstr.c ft_printputchar.c ft_printputnbr.c
+SRC =	ft_printf.c ft_strlen.c ft_printputstr.c ft_printputchar.c ft_printputnbr.c \
+		ft_printhxa.c ft_printptr.c ft_printunsigned.c
 
 OBJS = $(SRC:.c=.o)
 
@@ -21,10 +22,8 @@ RM	= rm -f
 CFLAGS = -Wall -Wextra -Werror
 
 NAME = printf.a
- 
-all: $(NAME)
 
-claen:
+clean:
 		$(RM) $(OBJS)
 		
 fclean:	clean
@@ -32,7 +31,8 @@ fclean:	clean
 		
 re:	fclean $(NAME)
 
-bonus:	$(OBJS) $(BONUS_OBJS)
+all:	$(OBJS) 
 		ar rcs $(NAME) $(OBJS)
 		
-.PHONY: all clean fclean re bonus
+.PHONY: all clean fclean re
+

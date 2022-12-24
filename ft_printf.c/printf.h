@@ -6,7 +6,7 @@
 /*   By: ssonmez <ssonmez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/10 19:12:37 by ssonmez           #+#    #+#             */
-/*   Updated: 2022/12/21 20:33:37 by ssonmez          ###   ########.fr       */
+/*   Updated: 2022/12/24 18:43:48 by ssonmez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 #include <stdlib.h>
 #include <stdarg.h>
 
+int     ft_printhxa(unsigned int x, const char a);
+int     ft_printunsigned(unsigned int x);
 int		ft_printputnbr(int nb);
 int		ft_printputchar(char c);
 int		ft_printputstr(char *str);
